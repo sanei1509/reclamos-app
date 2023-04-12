@@ -53,7 +53,7 @@ sanei1509/cencosud-bootcamp/Graphql/reclamos app
 
 # Hay dos maneras de correr la aplicación
 
-# 1. Instrucciones - Docker  ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+# 1. Instrucciones - ``Docker``  ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
 | se levanta la base de datos y el servidor en un solo comando
 
@@ -103,7 +103,7 @@ Para eso vas a tener que ejecutar el mutation que indico aqui debajo
 ## image
 
 
-# (2) Instrucciones - con servicio aws (RDS)  ![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
+# (2) Instrucciones - ``Servicio aws (RDS)``  ![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
 
 | se levanta el servidor y se conecta a la base de datos en AWS
 
