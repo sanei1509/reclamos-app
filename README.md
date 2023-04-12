@@ -101,7 +101,7 @@ yarn start:dev
 
 Para eso vas a tener que ejecutar el mutation que indico aqui debajo
 
-<img src="letra/SEED.png" width="80%"/>
+<img src="letra/SEED.png" width="100%"/>
 
 ## image
 
@@ -139,7 +139,7 @@ yarn start:dev
 
 Para eso vas a tener que ejecutar el mutation que indico aqui debajo
 
-<img src="letra/SEED.png" width="80%"/>
+<img src="letra/SEED.png" width="100%"/>
 
 
 ## Requerimientos
@@ -237,15 +237,15 @@ dividido en 2 partes:
 
 ``Query``: operaciones de lectura
 
-<img src="letra/doc-queries.png" width="500" height="300">
+<img src="letra/doc-queries.png" width="100%">
 
 ``Mutation``: operaciones de escritura
 
-<img src="letra/doc-mutation.png" width="500" height="300">
+<img src="letra/doc-mutation.png" width="100%">
 
 Para entrar debemos ir a  "Schemas" aqui:
 
-<img src="letra/doc-apollo.png" width="500" height="300">
+<img src="letra/doc-apollo.png" width="70%">
 
 
 
@@ -253,11 +253,11 @@ Para entrar debemos ir a  "Schemas" aqui:
 
 el token se obtiene como respuesta al loguearse o registrarse.
 
-<img src="letra/recupero-token.png" width="80%">
+<img src="letra/recupero-token.png" width="100%">
 
 Lo incluimos en el header como se muestra en la imagen siguiente:
 
-<img src="letra/auth-img-instruction.png" width="80%">
+<img src="letra/auth-img-instruction.png" width="100%">
 
 ## Mi intención:
 
