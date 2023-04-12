@@ -262,10 +262,20 @@ Lo incluimos en el header como se muestra en la imagen siguiente:
 ## Mi intención:
 
 ### OPERACIONES ADMIN
-Quize crear operaciones para usuarios ADMIN que son consultas generales en la base de datos
+Crear operaciones para usuarios ADMIN que son consultas generales en la base de datos
 
 ### OPERACIONES USER
 Crear operaciones para usuarios que son consultas especificas de ese usuario que esta utilizando la aplicación en particular.
+
+
+## Parte Bonus
+### ``Paginación de reclamos``
+En que consiste ? 
+- Es una forma de dividir los resultados de una consulta en varias páginas, para que no se carguen todos los resultados de una sola vez.
+
+- Es una forma de optimizar la carga de datos en la aplicación.
+
+- Es una forma de optimizar la carga de datos en la base de datos.
 
 
 
