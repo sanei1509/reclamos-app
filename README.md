@@ -38,7 +38,7 @@
 # Repositorios
 
 Todo mi resolución por historial de commits se encuentra en la siguiente ruta de mi repositorio:
-````
+````bash
 sanei1509/cencosud-bootcamp/Graphql/reclamos app
 ````
 
@@ -64,13 +64,13 @@ sanei1509/cencosud-bootcamp/Graphql/reclamos app
 
 * Clonar el repositorio
 
-````
+````bash
 git clone HTTPS_DEL_REPO
 ````
 
 * Instalar las dependencias
 
-````
+````bash
 yarn install
 ````
 
@@ -78,7 +78,7 @@ yarn install
 
 * Levantar la base de datos
  
-````
+````bash
 docker-compose up -d
 ````
 ``-d`` para que se ejecute desacoplada de la terminal
@@ -86,8 +86,7 @@ docker-compose up -d
 
 * Levantar el servidor
 ``directorio``: parado en ``/reclamos-app``
-````
-
+````bash
 yarn start:dev
 ````
 
@@ -100,7 +99,6 @@ Para eso vas a tener que ejecutar el mutation que indico aqui debajo
 
 <img src="letra/SEED.png" width="100%"/>
 
-## image
 
 
 # (2) Instrucciones (RDS) - ![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
@@ -113,12 +111,12 @@ Para eso vas a tener que ejecutar el mutation que indico aqui debajo
 
 * Clonar el repositorio
 
-````
+````bash
 git clone HTTPS_DEL_REPO
 ````
-* Instalar las dependencias
+* Instalar las dependencias necesarias para que la app funcione 
 
-````
+````bash
 yarn install
 ````
 * Crear archivo ``.env`` y copiar el contenido de ``.env-template-postgres-aws``
@@ -126,7 +124,7 @@ yarn install
 
 * Levantar el servidor
 ``directorio``: parado en ``/reclamos-app``
-````
+````bash
 yarn start:dev
 ````
 
@@ -157,10 +155,13 @@ Acciones CRUD para la entidad Reclamo
 
 ```json
 {
-  "idReclamo": 1,
-  "descripcion": "El producto no funciona",
+  "id": 'uuid',
+  "nroReclamo": "nroReclamo",
+  "titulo": "El producto no funciona",
+  "problema": "El producto no funciona",
   "detalleCompra": "fechaCompra, nroFactura, codigoProducto", //Solicitado de 3 inputs distintos
-  "problematica": "El producto no funciona",
+  "activo": true,
+  "usuarioId": "uuid"
 }
 ```
 # Decisiones para crear el proyecto
