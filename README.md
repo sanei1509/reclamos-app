@@ -29,11 +29,11 @@
 
 ## Desafio Adicional a esto
 
-* Utilizar de alguna manera alguno de los servicios de ``AWS``
-* Utilizar de alguna manera la automatización de aprovisionamiento de ``Terraform``
+* Utilizar de alguna manera alguno de los servicios de ``AWS`` ✅
+* Utilizar de alguna manera la automatización de aprovisionamiento de ``Terraform`` ⭕️
 
-* Hacer testing de la API (última a cosa a investigar personalmente)
-* Revisar la parte del bonus. (luego de terminar la parte de aplicar testing)
+* Hacer testing de la API (última a cosa a investigar personalmente) ✅
+* Revisar la parte del bonus. ✅
 
 # Repositorios
 
@@ -59,7 +59,8 @@ se levanta la base de datos y el servidor en un solo comando
 ## ``2. Con servicio AWS (RDS)``
 se levanta el servidor y se conecta a la base de datos en AWS
 
-# INSTRUCCIONES (1) CON DOCKER
+# INSTRUCCIONES (1) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+
 ## Para poder desplegar en tu maquina local
 
 * Instalar ``NodeJS`` y ``Yarn``
@@ -106,7 +107,7 @@ Para eso vas a tener que ejecutar el mutation que indico aqui debajo
 ## image
 
 
-# INSTRUCCIONES (2) CON SERVICIO AWS (RDS)
+# INSTRUCCIONES (2) CON SERVICIO AWS (RDS)  ![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
 
 ## Para poder desplegar en tu maquina local
 
