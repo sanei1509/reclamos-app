@@ -1,0 +1,155 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Usuario {
+  id: ID!
+  username: String!
+  email: String!
+  roles: [String!]!
+  active: String!
+  ultimaModificacion: Usuario
+  reclamos: [Reclamo!]!
+}
+
+type Reclamo {
+  id: ID!
+  nroReclamo: Int!
+  titulo: String!
+  detalleDeCompra: String!
+  problema: String!
+  activo: Boolean!
+  usuario: Usuario!
+}
+
+type AuthResponse {
+  token: String!
+  usuario: Usuario!
+}
+
+type Query {
+  """Listar todos los tickets de reclamos DB"""
+  ListarReclamos: [Reclamo!]!
+
+  """Listar todos los tickets de reclamos de un usuario"""
+  ListarReclamosUsuario: [Reclamo!]!
+
+  """Listar un ticket solicitado por app de usuario logueado"""
+  BuscarReclamoUsuario(id: ID!): Reclamo!
+
+  """Listar un ticket solicitado por app"""
+  SolicitarReclamoID(id: ID!): Reclamo!
+
+  """
+  Listar todos los tickets que tengan en su titulo o problema por ej = 'Falla' 
+  """
+  ReclamosPorPalabraClave(palabraClave: String!): [Reclamo!]!
+
+  """Listar todos los usuarios"""
+  ListarUsuarios: [Usuario!]!
+
+  """Buscar usuario por ID"""
+  BuscarUsuarioByID(id: ID!): Usuario!
+
+  """Validar Token de Usuario, Devuelve datos del usuario"""
+  ValidoToken: AuthResponse!
+
+  """Validar Usuario, Devuelve datos del usuario"""
+  ValidoUsuario: AuthResponse!
+}
+
+type Mutation {
+  """Crear un nuevo ticket de reclamo"""
+  CrearReclamo(crearReclamoInput: CrearReclamoInput!): Reclamo!
+
+  """Actualizar un ticket de reclamo existente enviando ID"""
+  ActualizarReclamo(actualizarReclamoInput: ActualizarReclamoInput!): Reclamo!
+
+  """Borrar un ticket de reclamo existente de DB"""
+  EliminarReclamoFisicamente(id: ID!): Reclamo!
+
+  """Dar de baja un ticket de reclamo existente de DB"""
+  EliminarReclamoLogicamente(id: ID!): Reclamo!
+
+  """Actualizar roles, datos de un usuario"""
+  ActualizarUsuario(actualizarUsuarioInput: ActualizarUsuarioInput!): Usuario!
+
+  """Eliminación permanente de un usuario"""
+  EliminarUsuario(id: ID!): Usuario!
+
+  """Baja logica de un usuario"""
+  BajaDeUsuario(id: ID!): Usuario!
+
+  """Registro de Usuario en la base de datos, Generar Auth Token"""
+  Register(registroUsuarioInput: RegistroUsuarioInput!): AuthResponse!
+
+  """Inicio de sesión de Usuario, Incluir Auth Token"""
+  Login(loginUsuarioInput: LoginUsuarioInput!): AuthResponse!
+
+  """Construye datos base para poder probar la aplicación"""
+  cargaDeDatos: Boolean!
+}
+
+input CrearReclamoInput {
+  """titulo del reclamo"""
+  titulo: String!
+
+  """marca del producto"""
+  marca: String!
+
+  """numero de la factura"""
+  numeroFactura: String!
+
+  """codigo del producto"""
+  codigoProducto: String!
+
+  """fecha de compra del producto"""
+  fechaCompra: String!
+
+  """problema del reclamo"""
+  problema: String!
+}
+
+input ActualizarReclamoInput {
+  """titulo del reclamo"""
+  titulo: String
+
+  """marca del producto"""
+  marca: String
+
+  """numero de la factura"""
+  numeroFactura: String
+
+  """codigo del producto"""
+  codigoProducto: String
+
+  """fecha de compra del producto"""
+  fechaCompra: String
+
+  """problema del reclamo"""
+  problema: String
+
+  """id del reclamo"""
+  id: ID!
+}
+
+input ActualizarUsuarioInput {
+  username: String
+  email: String
+  password: String
+  id: ID!
+  roles: [String!]
+  isActive: Boolean
+}
+
+input RegistroUsuarioInput {
+  username: String!
+  email: String!
+  password: String!
+}
+
+input LoginUsuarioInput {
+  username: String
+  email: String!
+  password: String!
+}
