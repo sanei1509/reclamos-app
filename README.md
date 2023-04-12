@@ -143,12 +143,12 @@ Para eso vas a tener que ejecutar el mutation que indico aqui debajo
 
 Acciones CRUD para la entidad Reclamo
 
-- obtener todos los reclamos
-- obtener un reclamo por id
-- actualizar un reclamo por id
-- borrar un reclamo por id
-- buscar reclamos por palabra clave (descripcion, problematica)
-- obtener una lista de reclamos filtrados por palabra clave. (descripcion, problematica)
+- obtener todos los reclamos ✅
+- obtener un reclamo por id ✅
+- actualizar un reclamo por id ✅
+- borrar un reclamo por id ✅
+- buscar reclamos por palabra clave (descripcion, problematica) ✅
+- obtener una lista de reclamos filtrados por palabra clave. (descripcion, problematica) ✅
 
 
 ## Modelo de reclamos
@@ -205,11 +205,11 @@ para asegurarnos de no guardar datos no deseados en nuestra base de datos vamos 
 
 Vamos a implementar ambas en la aplicacion de la mano de ``JWT``,
 
-1. Crear una sistema de REGISTRO.
+1. Crear una sistema de ``REGISTRO``.
 
-2. Crear un sistema de LOGIN: que nos devuelva un token.
+2. Crear un sistema de ``LOGIN``: que nos devuelva un token.
 
-3. Crear un sistema de AUTORIZACION: que nos permita acceder a los recursos.
+3. Crear un sistema de ``AUTORIZACION``: que nos permita acceder a los recursos.
 
 # Reglas   &   Lógica de la aplicación
 
