@@ -29,7 +29,12 @@ type AuthResponse {
 
 type Query {
   """Listar todos los tickets de reclamos DB"""
-  ListarReclamos: [Reclamo!]!
+  ListarReclamos(
+    """titulo del reclamo"""
+    palabraClave: String
+    limit: Int = 2
+    offset: Int = 0
+  ): [Reclamo!]!
 
   """Listar todos los tickets de reclamos de un usuario"""
   ListarReclamosUsuario: [Reclamo!]!

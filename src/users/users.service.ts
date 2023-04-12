@@ -45,8 +45,6 @@ export class ServicioUsuarios {
   async findOneById(id: string): Promise<Usuario> {
     try{
       const user = await this.repositorioUsuarios.findOne({where: {id}});
-      console.log(user);
-      console.log(`Usuario ${user.email}, ${user.roles} Listo para retorno`)
       return user;
     }
     catch(error){

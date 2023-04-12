@@ -10,6 +10,8 @@ import { ParseUUIDPipe, UseGuards } from '@nestjs/common';
 import { JwtAuthGuard } from 'src/auth/guards/jwt-auth-guards';
 import { CurrentUser } from 'src/auth/decorators/current-user.decorator';
 import { Usuario } from 'src/users/entities/user.entity';
+import { PaginationArgs } from 'src/common/dto/args/pagination-args';
+import { tituloArgsFilter } from './dto/args/tituloArgs';
 
 // Nuestro resolver va a responder todo lo relacionado a los RECLAMOS (tickets)
 @Resolver(() => Reclamo)
@@ -23,9 +25,12 @@ export class ReclamosResolver {
 
     // ADMIN Traer todos los reclamos, arreglo de reclamos
     @Query(() => [Reclamo], {name: "ListarReclamos", description: "Listar todos los tickets de reclamos DB"})
-    async getAllReclamos(): Promise<Reclamo[]> {
+    async getAllReclamos(
+        @Args() tituloArgs: tituloArgsFilter,
+        @Args() paginationArgs: PaginationArgs
+    ): Promise<Reclamo[]> {
         //devuelvo el arreglo de reclamos
-        return this.reclamosService.getAllReclamos();
+        return this.reclamosService.getAllReclamos(tituloArgs, paginationArgs);
     }
 
     // USER Traer todos los reclamos de un usuario, arreglo de reclamos

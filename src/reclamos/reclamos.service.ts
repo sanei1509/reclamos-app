@@ -6,6 +6,7 @@ import { CrearReclamoInput, ActualizarReclamoInput } from './dto/inputs';
 import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Usuario } from 'src/users/entities/user.entity';
+import { PaginationArgs } from 'src/common/dto/args/pagination-args';
 
 @Injectable()
 export class ReclamosService {
@@ -44,14 +45,34 @@ export class ReclamosService {
 
     // Traer todos los reclamos de la base de datos, arreglo de reclamos
     // Filtro : si recibimos titulo especificado se aplica el filtro
-    getAllReclamos(titulo? : tituloArgsFilter): Promise<Reclamo[]>{
+    getAllReclamos(titulo? : tituloArgsFilter, paginationArgs?: PaginationArgs): Promise<Reclamo[]>{
+        //Contexto donde recibo argumentos de paginacion
+        if (paginationArgs){
+            let {limit, offset} = paginationArgs;
+
+
+            if (limit === null || offset === null){
+                limit = 2;
+                offset = 0;
+            }
+
+            return this.reclamosRepository.find({
+                take: limit,
+                skip: offset,
+                where: {titulo: titulo.palabraClave}
+            });
+        }
+        //destructuramos los dato de paginación
+        // Si no recibimos limit y offset, seteamos valores por defecto
+
         // TODO: /filtrar titulo /paginar
         const reclamosDB = this.reclamosRepository.find(); 
 
         //Si recibimos titulo, devuelvo el arreglo de reclamos cuyo titulo contenga la palabra
         if (titulo)
-            return this.reclamosRepository.find({where: {titulo: titulo.palabraClave}});
-            
+            return this.reclamosRepository.find({
+                where: {titulo: titulo.palabraClave}
+            });
             
         //Si no recibimos titulo, devuelvo el arreglo de reclamos
         return this.reclamosRepository.find();
@@ -109,7 +130,7 @@ export class ReclamosService {
         const nuevoReclamo = this.reclamosRepository.create({...crearReclamoInput, usuario: usuarioDelTicket, detalleDeCompra: detalleDeCompraCSV});
         // Persistencia de datos
         await this.reclamosRepository.save(nuevoReclamo);
-        console.log(nuevoReclamo);
+       
         return nuevoReclamo;
     }
     
@@ -119,7 +140,6 @@ export class ReclamosService {
         // No pude con el preload
         //Buscamos el reclamo por id
         const reclamo = await this.getReclamoById(id);
-        console.log(reclamo);
 
         //Actualizamos los datos del reclamo si llegan
         reclamo.titulo = actualizarReclamoInput.titulo ? actualizarReclamoInput.titulo : reclamo.titulo;
@@ -139,7 +159,7 @@ export class ReclamosService {
         let nroReclamo = reclamoEliminado.nroReclamo;
 
         // Elimino el reclamo
-        console.log(await this.reclamosRepository.remove(reclamoEliminado));
+        await this.reclamosRepository.remove(reclamoEliminado)
 
         //Cargo nroReclamo y ID en el Reclamo eliminado
         reclamoEliminado.nroReclamo = nroReclamo;
@@ -156,7 +176,7 @@ export class ReclamosService {
         
         // Elimino el reclamo
         reclamoEliminado.activo = false;
-        console.log(await this.reclamosRepository.save(reclamoEliminado));
+        await this.reclamosRepository.save(reclamoEliminado)
 
         //Cargo nroReclamo y ID en el Reclamo eliminado
         reclamoEliminado.nroReclamo = nroReclamo;
@@ -192,9 +212,6 @@ export class ReclamosService {
             return reclamosToList;
         }
      }
-
-
-
 
     // Traer una lista de reclamos filtrados por palabra clave. (titulo, Problema)
     getReclamosFiltrados(palabraClave: string): string{

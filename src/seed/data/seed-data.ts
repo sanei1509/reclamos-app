@@ -32,7 +32,6 @@ export const SEED_RECLAMOS = [
         fechaCompra: "02/01/2023", 
         problema: 'Falla en las teclas',
         activo: true,
-        usuario: 1 
     },
     {
         titulo: 'Teclado Redragon',
@@ -42,7 +41,6 @@ export const SEED_RECLAMOS = [
         fechaCompra: "01/03/2023",
         problema: 'Falla en las luces RGB',
         activo: true,
-        usuario: 2 
     },
     {
         titulo: 'Heladera JAMES',
@@ -52,7 +50,6 @@ export const SEED_RECLAMOS = [
         fechaCompra: "02/02/2023", 
         problema: 'No enciende',
         activo: true,
-        usuario: 3 
     },
     {
         titulo: 'Mouse Razer',
@@ -62,7 +59,6 @@ export const SEED_RECLAMOS = [
         fechaCompra: "01/02/2022", 
         problema: 'Falla en el click derecho',
         activo: true,
-        usuario: 3 
     },
     {
         titulo: 'Heladera SAMSUNG',
@@ -72,7 +68,6 @@ export const SEED_RECLAMOS = [
         fechaCompra: "15/01/2023", 
         problema: 'Falla en el enfríado',
         activo: true,
-        usuario: 3 
     },
     {
         titulo: 'Smartwatch SAMSUNG',
@@ -82,7 +77,6 @@ export const SEED_RECLAMOS = [
         fechaCompra: "03/01/2023", 
         problema: 'Error en el encendido',
         activo: true,
-        usuario: 3 
     },
     {
         titulo: 'Celular SAMSUNG',
@@ -92,7 +86,6 @@ export const SEED_RECLAMOS = [
         fechaCompra: "22/08/2022", 
         problema: 'Error en la batería',
         activo: true,
-        usuario: 3 
     },
     {
         titulo: 'Laptop Lenovo',
@@ -102,6 +95,81 @@ export const SEED_RECLAMOS = [
         fechaCompra: "11/02/2023", 
         problema: 'Error en el teclado',
         activo: true,
-        usuario: 3 
     },
 ]
+
+
+const SEED_RECLAMOS2 = [
+    {
+        titulo: "Impresora HP",
+        marca: "HP",
+        numeroFactura: "23111",
+        codigoProducto: "001541",
+        fechaCompra: "10/05/2022",
+        problema: "Papel atascado",
+        activo: true
+        },
+        {
+        titulo: "Auriculares Sony",
+        marca: "Sony",
+        numeroFactura: "990231",
+        codigoProducto: "000555",
+        fechaCompra: "20/01/2023",
+        problema: "Falla en el micrófono",
+        activo: true
+        },
+        {
+        titulo: "Smart TV Samsung",
+        marca: "Samsung",
+        numeroFactura: "43456",
+        codigoProducto: "009922",
+        fechaCompra: "05/04/2022",
+        problema: "No se conecta a internet",
+        activo: true
+        },
+        {
+        titulo: "Tablet Lenovo",
+        marca: "Lenovo",
+        numeroFactura: "10045",
+        codigoProducto: "005676",
+        fechaCompra: "08/12/2022",
+        problema: "Batería no carga",
+        activo: true
+        },
+        {
+        titulo: "Cámara Canon",
+        marca: "Canon",
+        numeroFactura: "34624",
+        codigoProducto: "002456",
+        fechaCompra: "12/02/2022",
+        problema: "No enfoca correctamente",
+        activo: true
+        },
+        {
+        titulo: "Aspiradora Dyson",
+        marca: "Dyson",
+        numeroFactura: "54612",
+        codigoProducto: "008976",
+        fechaCompra: "27/11/2021",
+        problema: "Pérdida de succión",
+        activo: true
+        },
+        {
+        titulo: "Monitor Acer",
+        marca: "Acer",
+        numeroFactura: "12444",
+        codigoProducto: "001212",
+        fechaCompra: "15/03/2023",
+        problema: "Píxeles muertos en la pantalla",
+        activo: true
+        },
+        {
+        titulo: "Altavoces JBL",
+        marca: "JBL",
+        numeroFactura: "66789",
+        codigoProducto: "003345",
+        fechaCompra: "03/02/2023",
+        problema: "Sonido distorsionado",
+        activo: true
+        }
+];

@@ -150,6 +150,9 @@ Acciones CRUD para la entidad Reclamo
 - buscar reclamos por palabra clave (descripcion, problematica) ✅
 - obtener una lista de reclamos filtrados por palabra clave. (descripcion, problematica) ✅
 
+[BONUS]
+
+- Paginacion de reclamos ✅
 
 ## Modelo de reclamos
 

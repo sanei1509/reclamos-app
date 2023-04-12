@@ -23,7 +23,6 @@ export class AuthService {
   }
 
   async register(registroUsuarioInput: RegistroUsuarioInput): Promise<AuthResponse>{
-    console.log({registroUsuarioInput});
     // Crear usuario
     const usuario = await this.servicioUsuarios.create(registroUsuarioInput);
     // Generar Token
@@ -37,15 +36,10 @@ export class AuthService {
   }
 
   async login(loginUsuarioInput: LoginUsuarioInput): Promise<AuthResponse> {
-    console.log({loginUsuarioInput});
-
     // Validar usuario
     const {email, password} = loginUsuarioInput;
     const usuario = await this.servicioUsuarios.findOneByEmail(email);
 
-    console.log(usuario);
-    console.log(bcrypt.compareSync(password, usuario.password));
-    
     // En caso de coincidencia en contraseñas
     if(bcrypt.compareSync(password, usuario.password)) {
       // Genero token

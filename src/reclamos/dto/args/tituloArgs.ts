@@ -7,6 +7,6 @@ export class tituloArgsFilter{
     //Validaciones
     @Field(() => String, {description: 'titulo del reclamo', nullable: true})
     @IsOptional()
-    palabraClave: string;
+    palabraClave?: string;
 
 }

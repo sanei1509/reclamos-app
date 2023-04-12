@@ -21,7 +21,6 @@ import { JwtStrategy } from './strategies/jwt.strategy';
     // signOptions: { expiresIn: '60s' },
     // Con la siguiente funcion queremos inyectar las dependencias
     useFactory: (configService : ConfigService) => {
-      console.log(configService);
       return {
         secret: configService.get('JWT_SECRET'),
         signOptions: {

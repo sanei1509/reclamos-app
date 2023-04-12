@@ -5,7 +5,6 @@ import { Usuario } from "src/users/entities/user.entity";
 
 export const CurrentUser =  createParamDecorator(
    (roles: RolesValidos[] = [], context: ExecutionContext) => {
-    console.log(roles);
     // 1- obtengo el contexto
     // 2- del contexto obtengo la solicitud
     // 3- de la solicitud obtengo el usuario

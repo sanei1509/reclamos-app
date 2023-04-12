@@ -33,7 +33,6 @@ export class AuthResolver {
   @UseGuards( JwtAuthGuard )
   //solo los usuarios con rol admin pueden acceder a esta ruta
   validoToken(@CurrentUser([RolesValidos.user]) usuario : Usuario): AuthResponse{
-    console.log({usuario})
     return this.authService.validarToken(usuario);
 
     // throw new Error("Method not implemented.");
