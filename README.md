@@ -59,7 +59,7 @@ se levanta la base de datos y el servidor en un solo comando
 ## ``2. Con servicio AWS (RDS)``
 se levanta el servidor y se conecta a la base de datos en AWS
 
-# INSTRUCCIONES (1) ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+# 1. INSTRUCCIONES - DOCKER  ![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
 
 ## Para poder desplegar en tu maquina local
 
@@ -107,7 +107,7 @@ Para eso vas a tener que ejecutar el mutation que indico aqui debajo
 ## image
 
 
-# INSTRUCCIONES (2) CON SERVICIO AWS (RDS)  ![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
+# (2) INSTRUCCIONES - CON SERVICIO AWS (RDS)  ![AWS](https://img.shields.io/badge/Amazon_AWS-FF9900?style=for-the-badge&logo=amazonaws&logoColor=white)
 
 ## Para poder desplegar en tu maquina local
 
