@@ -253,11 +253,11 @@ Para entrar debemos ir a  "Schemas" aqui:
 
 el token se obtiene como respuesta al loguearse o registrarse.
 
-<img src="letra/recupero-token.png" width="500" height="300">
+<img src="letra/recupero-token.png" width="80%">
 
 Lo incluimos en el header como se muestra en la imagen siguiente:
 
-<img src="letra/auth-img-instruction.png" width="700" height="500">
+<img src="letra/auth-img-instruction.png" width="80%">
 
 ## Mi intención:
 
